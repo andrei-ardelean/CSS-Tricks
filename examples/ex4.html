@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example #4: HIDE-AND-SEEK</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .container {
+      width: 80vh;
+      max-width: 700px;
+      margin: 10px auto;
+      border: 1px solid black;
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .main {
+      background: rgb(159, 255, 159);
+      padding: 10px;
+    }
+
+    .main::selection {
+      background: black;
+      color: white;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .buttons button {
+      display: inline-block;
+      height: 50px;
+      width: 150px;
+      cursor: pointer;
+      border: 1px solid black;
+      border-radius: 5px;
+    }
+
+    .buttons button:hover {
+      background-color: rgb(214, 214, 214);
+    }
+
+    .display-none {
+      display: none;
+    }
+
+    .visibility-hidden {
+      visibility: hidden;
+    }
+
+    .rotate-90deg {
+      transform: rotateX(90deg);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="main">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem temporibus nulla dolorem in repudiandae enim similique quas excepturi atque aut.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem temporibus nulla dolorem in repudiandae enim similique quas excepturi atque aut.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem temporibus nulla dolorem in repudiandae enim similique quas excepturi atque aut.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem temporibus nulla dolorem in repudiandae enim similique quas excepturi atque aut.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem temporibus nulla dolorem in repudiandae enim similique quas excepturi atque aut.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem temporibus nulla dolorem in repudiandae enim similique quas excepturi atque aut.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem temporibus nulla dolorem in repudiandae enim similique quas excepturi atque aut.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem temporibus nulla dolorem in repudiandae enim similique quas excepturi atque aut.
+    </div>
+    <div class="buttons">
+      <button onclick="display()">DISPLAY: NONE</button>
+      <button onclick="visibility()">VISIBILITY: HIDDEN</button>
+      <button onclick="rotate()">ROTATE 90DEG</button>
+    </div>
+  </div>
+</body>
+<script>
+  function display() {
+    const div = document.getElementsByClassName("main")[0];
+    if (div.classList.contains('display-none')){
+      div.classList.remove('display-none');
+      return;
+    }
+    div.classList.add('display-none');
+  }
+
+  function visibility() {
+    const div = document.getElementsByClassName("main")[0];
+    if (div.classList.contains('visibility-hidden')){
+      div.classList.remove('visibility-hidden');
+      return;
+    }
+    div.classList.add('visibility-hidden');
+  }
+
+  function rotate() {
+    const div = document.getElementsByClassName("main")[0];
+    if (div.classList.contains('rotate-90deg')){
+      div.classList.remove('rotate-90deg');
+      return;
+    }
+    div.classList.add('rotate-90deg');
+  }
+</script>
+</html>
