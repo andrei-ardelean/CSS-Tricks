@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(235, 235, 235);
+}
+
+.container {
+  text-transform: uppercase;
+  background-color: rgb(151, 56, 240);
+  height: 125px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.1rem;
+  border: 2px solid transparent;
+}
+
+.container a:hover {
+  border-bottom: 2px solid white;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 650px) {
+  .container {
+    flex-direction: column;
+  }
+}

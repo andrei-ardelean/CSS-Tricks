@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(235, 235, 235);
+}
+
+:root {
+  --pendulum-speed: 1s;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  position: relative;
+}
+
+.container h1 {
+  position: absolute;
+  bottom: 50%;
+}
+
+.ball {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  background: radial-gradient(
+    circle at 65% 15%,
+    white 1px,
+    rgb(224, 224, 224) 3%,
+    rgb(184, 184, 184) 60%,
+    rgb(133, 133, 133) 100%
+  );
+}
+
+#first-ball {
+  left: 600px;
+  top: 200px;
+  transform: translate(-150px, -50px);
+  animation: left-ball-move var(--pendulum-speed) 1s ease-in alternate infinite;
+}
+
+#second-ball {
+  left: 700px;
+  top: 200px;
+}
+
+#third-ball {
+  left: 800px;
+  top: 200px;
+}
+
+#fourth-ball {
+  left: 900px;
+  top: 200px;
+  animation: right-ball-move var(--pendulum-speed) 1s ease-out alternate infinite;
+}
+
+.wire {
+  width: 10px;
+  height: 250px;
+  position: absolute;
+  background: black;
+  border-radius: 20px;
+}
+
+#first-wire {
+  left: 650px;
+  top: -10px;
+  transform: translate(-50px, -35px) rotateZ(45deg);
+  animation: left-wire-move var(--pendulum-speed) 1s ease-in alternate infinite;
+}
+
+#second-wire {
+  left: 750px;
+  top: -10px;
+}
+
+#third-wire {
+  left: 850px;
+  top: -10px;
+}
+
+#fourth-wire {
+  left: 950px;
+  top: -10px;
+  animation: right-wire-move var(--pendulum-speed) 1s ease-out alternate infinite;
+}
+
+@keyframes left-ball-move {
+  0% {
+    transform: translate(-150px, -50px);
+  }
+
+  50% {
+    transform: translate(0px, 0px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes right-ball-move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(0px, 0px);
+  }
+
+  100% {
+    transform: translate(150px, -50px);
+  }
+}
+
+@keyframes left-wire-move {
+  0% {
+    transform: translate(-50px, -35px) rotateZ(45deg);
+  }
+
+  50% {
+    transform: translate(0px, 0px) rotateZ(0deg);
+  }
+
+  100% {
+    transform: translate(0px, 0px) rotateZ(0deg);
+  }
+}
+
+@keyframes right-wire-move {
+  0% {
+    transform: translate(0px, 0px) rotateZ(0deg);
+  }
+
+  50% {
+    transform: translate(0px, 0px) rotateZ(0deg);
+  }
+
+  100% {
+    transform: translate(50px, -35px) rotateZ(-45deg);
+  }
+}

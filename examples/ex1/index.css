@@ -31,19 +31,19 @@ body {
 .green {
   background-color: green;
   opacity: 1;
-  animation: light-off 1s 1s linear forwards;
+  animation: light-off 1s 1s ease-in forwards;
 }
 
 .yellow {
   background-color: yellow;
   opacity: 0.25;
-  animation: light-toggle 2s 1.5s linear forwards;
+  animation: light-toggle 2s 1.5s ease-in-out forwards;
 }
 
 .red {
   background-color: red;
   opacity: 0.25;
-  animation: light-on 1s 2.5s linear forwards;
+  animation: light-on 1.5s 2.5s ease-in forwards;
 }
 
 @keyframes light-on {
