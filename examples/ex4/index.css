@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: 80vh;
+  max-width: 700px;
+  margin: 10px auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 2px 2px 2px 2px rgb(196, 196, 196);
+}
+
+.main {
+  background: rgb(159, 255, 159);
+  padding: 10px;
+}
+
+.main::selection {
+  background: black;
+  color: white;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.buttons button {
+  display: inline-block;
+  height: 50px;
+  width: 150px;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.buttons button:hover {
+  background-color: rgb(214, 214, 214);
+}
+
+.display-none {
+  display: none;
+}
+
+.visibility-hidden {
+  visibility: hidden;
+}
+
+.rotate-90deg {
+  transform: rotateX(90deg);
+}

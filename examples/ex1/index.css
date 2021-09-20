@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(185, 185, 185);
+  width: 20vw;
+  max-width: 175px;
+  height: 50vh;
+  margin: 10px auto;
+  padding: 20px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.container > div {
+  flex-basis: 120px;
+  width: 120px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+.green {
+  background-color: green;
+  opacity: 1;
+  animation: light-off 1s 1s linear forwards;
+}
+
+.yellow {
+  background-color: yellow;
+  opacity: 0.25;
+  animation: light-toggle 2s 1.5s linear forwards;
+}
+
+.red {
+  background-color: red;
+  opacity: 0.25;
+  animation: light-on 1s 2.5s linear forwards;
+}
+
+@keyframes light-on {
+  from {
+    opacity: 0.25;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes light-off {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0.25;
+  }
+}
+
+@keyframes light-toggle {
+  0% {
+    opacity: 0.25;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.25;
+  }
+}

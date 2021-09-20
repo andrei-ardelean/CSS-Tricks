@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px rgb(196, 196, 196);
+  width: 60vw;
+  max-width: 500px;
+  height: 50vh;
+  margin: 10px auto;
+  padding: 10px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.container > div {
+  flex-basis: 120px;
+  width: 120px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.green {
+  background-color: green;
+}

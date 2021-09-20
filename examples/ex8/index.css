@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  box-shadow: 2px 2px 2px 2px rgb(196, 196, 196);
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 60vh;
+  width: 60vw;
+  min-width: 875px;
+  margin: 10px auto;
+  padding: 20px;
+  position: relative;
+}
+
+.container h1 {
+  text-align: left;
+}
+
+.poker-card {
+  background-color: white;
+  box-shadow: 2px 2px 5px 2px rgb(223, 223, 223);
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 20rem;
+  width: 15rem;
+  position: absolute;
+}
+
+#ten {
+  left: 40%;
+  top: 25%;
+  z-index: 1;
+  animation: first-from-left 3s 1s linear infinite;
+}
+
+#jack {
+  left: 45%;
+  top: 25%;
+  z-index: 2;
+  animation: second-from-left 3s 1s linear infinite;
+}
+
+#queen {
+  left: 50%;
+  top: 25%;
+  z-index: 3;
+  animation: third-from-left 3s 1s linear infinite;
+}
+
+#king {
+  left: 55%;
+  top: 25%;
+  z-index: 4;
+  animation: fourth-from-left 3s 1s linear infinite;
+}
+
+.poker-card .number {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: red;
+  display: inline-block;
+  text-align: center;
+  height: 30px;
+  width: 30px;
+}
+
+.poker-card .type {
+  position: relative;
+  top: 45px;
+  left: -20px;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-color: red;
+  transform: rotateZ(45deg);
+}
+
+@keyframes first-from-left {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(-20deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes second-from-left {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(-15deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes third-from-left {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(-10deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes fourth-from-left {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(-5deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
